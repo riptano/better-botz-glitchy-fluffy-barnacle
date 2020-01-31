@@ -15,39 +15,45 @@ router.get('/', function(req, res, next) {
 router.get('/data', function (req, res) {
   var theData = 'Nope!';  
   
-  const fs = require("fs");
-  
   var fileExists = fs.existsSync(path);
   if (fileExists) {
     theData = "The file exists.\n"
     
-    process.env.USERNAME
+    theData += process.env.USERNAME
+    theData += process.env.PASSWORD  
     
+    const client = new Client({
+      cloud: { secureConnectBundle: path },
+      credentials: { username: process.env.USERNAME, password: process.env.PASSWORD }
+    });
     
+    client.connect();
+
+    // Execute a query
+    const rs = client.execute('SELECT * FROM system.local');
+    theData += rs.first()['cluster_name']
     
-  }
+    client.shutdown();
   
-  res.send(theData);
+    res.send(theData);
+  } else {
+    res.send("Dammit!");
+  }
 })
 
+async function getData() {
+  const client = new Client({
+    cloud: { secureConnectBundle: path },
+    credentials: { username: 'username', password: 'password' }
+  });
 
+  await client.connect();
 
-// async function run() {
-//   const client = new Client({
-//     cloud: { secureConnectBundle: path },
-//     credentials: { username: 'username', password: 'password' }
-//   });
+  // Execute a query
+  const rs = await client.execute('SELECT * FROM system.local');
+  console.log(`Hello from cluster: ${rs.first()['cluster_name']}`);
 
-//   await client.connect();
-
-//   // Execute a query
-//   const rs = await client.execute('SELECT * FROM system.local');
-//   console.log(`Hello from cluster: ${rs.first()['cluster_name']}`);
-
-//   await client.shutdown();
-// }
-
-// // Run the async function
-// run();
+  await client.shutdown();
+}
 
 module.exports = router;
