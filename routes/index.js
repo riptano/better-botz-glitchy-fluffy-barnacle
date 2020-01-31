@@ -1,5 +1,5 @@
 const fs = require('fs');
-const path = '~/.data/secure-connect.zip';
+const path = '../';
 
 var express = require('express');
 var router = express.Router();
@@ -10,9 +10,12 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/data', function (req, res) {
-  var theData = 'The data from the database.';  
+  var theData = 'Nope!';  
   
-  theData = fs.existsSync(path)
+  const fs = require("fs");
+  
+  exists = fs.existsSync(path);
+  if (fileExists)
   
   res.send(theData);
 })
