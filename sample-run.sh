@@ -1,3 +1,3 @@
 npm install
 
-USERNAME=cassandra PASSWORD=cassandra bash -c 'node bin/www'
+ASTRAUSER=cassandra ASTRAPASSWORD=cassandra bash -c 'node bin/www'

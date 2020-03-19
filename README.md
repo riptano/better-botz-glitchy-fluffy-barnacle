@@ -15,11 +15,11 @@ Next, run `npm install` in the root directory of the project to retrieve all fo 
 Now run the server as shown:
 
 ``` bash
-USERNAME=databaseUsername PASSWORD=databasePassword bash -c 'node bin/www'
+ASTRAUSER=databaseUsername ASTRAPASSWORD=databasePassword bash -c 'node bin/www'
 ```
 
 Once running, check out the following paths for examples of data retrieval:
 
-http://localhost:3000/datareport >> this is a response via generated jade template w/ the data results.
-http://localhost:3000/data >> this is a direct data response of just the JSON response via API get call.
-http://localhost:3000/ >> verifies express.js is running with Jade templates!
+https://glitchy-fluffy-barnacle.glitch.me/datareport >> this is a response via generated jade template w/ the data results.
+https://glitchy-fluffy-barnacle.glitch.me/data >> this is a direct data response of just the JSON response via API get call.
+https://glitchy-fluffy-barnacle.glitch.me/ >> verifies express.js is running with Jade templates!
