@@ -20,6 +20,6 @@ ASTRAUSER=databaseUsername ASTRAPASSWORD=databasePassword bash -c 'node bin/www'
 
 Once running, check out the following paths for examples of data retrieval:
 
-https://glitchy-fluffy-barnacle.glitch.me/datareport >> this is a response via generated jade template w/ the data results.
-https://glitchy-fluffy-barnacle.glitch.me/data >> this is a direct data response of just the JSON response via API get call.
-https://glitchy-fluffy-barnacle.glitch.me/ >> verifies express.js is running with Jade templates!
+https://better-botz-glitchy-fluffy-barnacle.glitch.me/datareport >> this is a response via generated jade template w/ the data results.
+https://better-botz-glitchy-fluffy-barnacle.glitch.me/data >> this is a direct data response of just the JSON response via API get call.
+https://better-botz-glitchy-fluffy-barnacle.glitch.me/ >> verifies express.js is running with Jade templates!
