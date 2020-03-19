@@ -6,6 +6,7 @@ dependencies:
   http-errors: 1.6.3
   jade: 1.11.0
   morgan: 1.9.1
+  uikit: 3.3.7
 packages:
   /@types/long/4.0.1:
     dev: false
@@ -698,6 +699,10 @@ packages:
     optional: true
     resolution:
       integrity: sha1-bgkk1r2mta/jSeOabWMoUKD4grc=
+  /uikit/3.3.7:
+    dev: false
+    resolution:
+      integrity: sha512-vY7chSjBpu3hgFHFbl/Cr2cUodoEew69uPPQl2E0WcK6UkG2DYhgV0XNDMNLpeGGfrw6C+H9cW89I7Gq7N8Ylw==
   /unpipe/1.0.0:
     dev: false
     engines:
@@ -767,3 +772,4 @@ specifiers:
   http-errors: ~1.6.3
   jade: ~1.11.0
   morgan: ~1.9.1
+  uikit: ^3.3.7-dev.bd42dc1ee
