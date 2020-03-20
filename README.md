@@ -1,8 +1,8 @@
 # better-botz-gui-at-glitch
 
-A sample Glitch website built with Node.js using Express and DataStax Apollo.
+A sample reference website built with Node.js using Express powered by [Astra](https://www.datastax.com/cloud/datastax-astra) DBaaS. This website has been built using [Glitch](https://glitch.com/) and can be seen in action via the Glitch [better-botz-glitchy-fluffy-barnacle](https://glitch.com/~better-botz-glitchy-fluffy-barnacle).
 
-To start the app:
+## This will be updated soon, currently slightly out of date:
 
 First add a `.data` directory and then copy your security bundle file to the path. An example of it being setup is shown in the app.js file in the following code snippet.
 
