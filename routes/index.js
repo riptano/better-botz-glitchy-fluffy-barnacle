@@ -31,9 +31,17 @@ router.get('/data', function (req, res) {
   })
 });
 
+router.post('/createorder', function(req,res){
+  console.log(req.body);
+})
+
 async function getMoreData(){
   const result = await client.execute('SELECT customer_name, address, description, price, prod_id, prod_name, sell_price FROM betterbotz.orders');
   return result.rows;
+}
+
+async function writeProduct() {
+  
 }
 
 module.exports = router;
